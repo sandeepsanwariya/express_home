@@ -6,6 +6,9 @@ const nextConfig = {
     loader: 'imgix',
     path: '/',
   },
+  eslint:{
+    ignoreDuringBuilds:true
+  }
 }
 
 module.exports = nextConfig
