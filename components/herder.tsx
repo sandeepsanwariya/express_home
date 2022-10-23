@@ -1,17 +1,13 @@
-import { Fragment, useRef, useState } from "react";
+import { Fragment } from "react";
 import { Menu, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 function herder() {
-    const ref = useRef(null)
-    const [one, setone] = useState(false)
-    const [two, settwo] = useState(false)
-    const [three, setthree] = useState(false)
-    const [four, setfour] = useState(false)
+  
     window.addEventListener(
         "scroll",
         () => {
-            if (window.pageYOffset > 40 && ref?.current) {
+            if (window.pageYOffset > 40 ) {
                 //   @ts-ignore
                 document?.getElementById('header')?.style?.setProperty("background", "white")
             } else {
@@ -25,7 +21,7 @@ function herder() {
 
 
     return (
-        <div id='header' ref={ref} className='sm:px-5 xs:px-7  delay-[300ms] duration-[400ms]  flex fixed bg-transparent scroll-m-10  w-full justify-between items-center space-x-5 '>
+        <div id='header' className='sm:px-5 xs:px-7  delay-[300ms] duration-[400ms]  flex fixed bg-transparent scroll-m-10  w-full justify-between items-center space-x-5 '>
             <div className='w-3/12'>
                 <img className='w-100 h-100 min-w-[150px]' alt='logo' src='../assests/Logo.png' />
                 {/* <img alt='logo' src='../assests/gilse.png'/>
