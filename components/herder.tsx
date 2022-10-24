@@ -31,7 +31,7 @@ function herder() {
                 <img alt='logo' src='../assests/image (4).png'/> */}
 
             </div>
-            <div className="w-8/12 text-lg flex justify-end items-center space-x-4 font-semibold xs:hidden sm:hidden" >
+            <div className="w-8/12 text-lg  justify-end items-center space-x-4 font-semibold hidden" >
             <Menu as="div" className="relative inline-block text-left">
                         <div>
                             <Menu.Button className="inline-flex w-full justify-center rounded-md  px-4 py-2 text-sm font-medium ">
@@ -458,7 +458,7 @@ function herder() {
                         </Transition>
                     </Menu>
             </div>
-            <div className="w-2/12  justify-end space-x-4 items-center sm:px-6 xs:px-6">
+            <div className="w-2/12  justify-end space-x-4 items-center sm:px-6 xs:px-6 hidden">
                 <button className="border-2 text-lg border-[#0f866c] font-bold  hover:bg-yellow-500 bg-transparent text-[#0f866c] hover:text-black px-5 py-2 whitespace-nowrap rounded-full">Get Started</button>
             </div>
 
