@@ -20,9 +20,9 @@ const LanguageSelect = () => {
   const { t } = useTranslation();
 
   const [menuAnchor, setMenuAnchor] = React.useState(null);
-  React.useEffect(() => {
-    document.body.dir = languageMap[selected].dir;
-  }, [menuAnchor, selected]);
+  // React.useEffect(() => {
+  //   document.body.dir = languageMap[selected].dir;
+  // }, [menuAnchor, selected]);
 
   return (
     <div className="d-flex justify-content-end align-items-center language-select-root">
