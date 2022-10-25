@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { Menu, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-
+import LanguageSelect from "./languageSelect";
 function herder() {
   
     window.addEventListener(
@@ -458,8 +458,10 @@ function herder() {
                         </Transition>
                     </Menu>
             </div>
-            <div className="w-2/12  justify-end space-x-4 items-center sm:px-6 xs:px-6 hidden">
-                <button className="border-2 text-lg border-[#0f866c] font-bold  hover:bg-yellow-500 bg-transparent text-[#0f866c] hover:text-black px-5 py-2 whitespace-nowrap rounded-full">Get Started</button>
+            <div className="w-2/12  justify-end space-x-4 items-center sm:px-6 xs:px-6 ">
+                <button className="border-2 text-lg border-[#0f866c] font-bold  hover:bg-yellow-500 bg-transparent text-[#0f866c] hover:text-black px-5 py-2 whitespace-nowrap rounded-full">
+                <LanguageSelect />
+                </button>
             </div>
 
         </div>

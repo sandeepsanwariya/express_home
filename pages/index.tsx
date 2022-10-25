@@ -3,6 +3,11 @@ import type { NextPage } from 'next'
 
 import dynamic from 'next/dynamic'
 import { useState } from 'react'
+import { useRouter } from 'next/router';
+import { useTranslation } from "react-i18next";
+import LanguageSelect from "../components/languageSelect";
+
+
 
 const Herder = dynamic(
   () => import('../components/herder'),
@@ -11,6 +16,7 @@ const Herder = dynamic(
 
 
 const Home: NextPage = () => {
+  const { t }:any = useTranslation();
   function classNames(...classes: any) {
     return classes.filter(Boolean).join(' ')
   }
@@ -65,6 +71,8 @@ const Home: NextPage = () => {
       },
     ],
   })
+
+  const router = useRouter();
   return (
 <>
     <Herder />
@@ -74,10 +82,11 @@ const Home: NextPage = () => {
       <div className=" w-full h-[790px] bg-full bg-no-repeat bg-top bg-cover  bg-[url('/assests/bg.png')] ">
 
         <div className=' flex flex-col h-full  space-y-2 w-full justify-start items-center pt-[180px] md:pt-[150px] sm:pt-[100px] xs:pt-[60px]'>
-          <div className='text-[5.8rem] font-serif leading-1 text-center '>The VPN that just works</div>
-          <div className='text-[2rem]'>Go further with the #1 trusted leader in VPN</div>
-          <div className='bg-[#0f866c] hover:bg-yellow-500 cursor-pointer rounded-full text-center text-[1.5rem] text-white px-4 py-2' > Get the express VPN</div>
-          <div className='text-sm'>30-DAY MONEY-BACK GUARANTEE</div>
+          <div className='text-[5.8rem] font-serif leading-1 text-center '>
+          {t("The VPN that just works")}</div>
+          <div className='text-[2rem]'>{t("Go further with the #1 trusted leader in VPN")}</div>
+          <div className='bg-[#0f866c] hover:bg-yellow-500 cursor-pointer rounded-full text-center text-[1.5rem] text-white px-4 py-2' > {t("Get the express VPN")}</div>
+          <div className='text-sm'>{t("30-DAY MONEY-BACK GUARANTEE")}</div>
         </div>
       </div>
       <div className='flex flex-col justify-center  items-center w-full space-x-4 space-y-4 mt-[100px] xs:px-6 sm:px-4'>
@@ -88,7 +97,7 @@ const Home: NextPage = () => {
           </div>
           <div className='h-full w-full flex flex-col justify-between space-y-2 items-start' >
             <div className='text-[3rem] font-serif leading-11'>
-              Secure access, worldwide
+            {t(" Secure access, worldwide")}
             </div>
             <div className='text-[1rem]'>
               Connect reliably from anywhere, to anywhere. Our network of high-speed servers across 94 countries puts you in control.
